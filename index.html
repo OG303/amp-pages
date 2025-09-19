@@ -80,41 +80,27 @@
       flex-shrink:0; 
     }
 
-    /* BUTTON HORIZONTAL */
-    .btn-horizontal { 
-      display:flex; 
-      justify-content:center; 
-      gap:5px; 
-      margin:10px 0; 
-    }
+    .button-horizontal { 
+  background:#ff5722; 
+  color:#fff; 
+  padding:10px 20px; 
+  text-decoration:none; 
+  border-radius:5px; 
+  text-align:center; 
+  margin:5px;
+}
 
-    .btn-horizontal a { 
-      background:#ff5722; 
-      color:#fff; 
-      padding:10px 20px; 
-      text-decoration:none; 
-      border-radius:5px; 
-      text-align:center; 
-    }
-
-    /* BUTTON VERTICAL */
-    .btn-vertical { 
-      display:flex; 
-      flex-direction:column; 
-      align-items:center; 
-      margin:10px 0; 
-    }
-
-    .btn-vertical a { 
-      background:#2196f3; 
-      color:#fff; 
-      padding:10px 20px; 
-      text-decoration:none; 
-      border-radius:5px; 
-      width:120px; 
-      text-align:center; 
-      margin:5px 0; 
-    }
+.button-vertical { 
+  background:#2196f3; 
+  color:#fff; 
+  padding:10px 20px; 
+  text-decoration:none; 
+  border-radius:5px; 
+  width:120px; 
+  text-align:center; 
+  margin:5px 0; 
+  display:block;
+}
 
     /* INFO TABLE */
     .info-table { 
@@ -185,9 +171,9 @@
 
   </style>
 
-  <script async src="https://cdn.ampproject.org/v0.js"></script>
-  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
-  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
 </head>
 <body>
 
@@ -215,23 +201,19 @@
 </div>
 
 <!-- Horizontal Buttons -->
-<amp-list width="auto" height="50" layout="fixed-height"
-          src="https://link-amp.79632f5c04921bbc3517c5b6d3b78f45.r2.dev/buttons.json"
-          single-item>
+<amp-list width="auto" height="50" layout="fixed-height" src="assets/buttons.json" single-item>
   <template type="amp-mustache">
     {{#horizontalButtons}}
-      <a href="{{link}}" style="background:#ff5722;color:#fff;padding:10px 20px;margin:5px;text-decoration:none;border-radius:5px;">{{text}}</a>
+      <a href="{{link}}" class="button-horizontal">{{text}}</a>
     {{/horizontalButtons}}
   </template>
 </amp-list>
 
 <!-- Vertical Buttons -->
-<amp-list width="auto" height="250" layout="fixed-height"
-          src="https://link-amp.79632f5c04921bbc3517c5b6d3b78f45.r2.dev/buttons.json"
-          single-item>
+<amp-list width="auto" height="250" layout="fixed-height" src="assets/buttons.json" single-item>
   <template type="amp-mustache">
     {{#verticalButtons}}
-      <a href="{{link}}" style="background:#2196f3;color:#fff;padding:10px 20px;margin:5px 0;text-decoration:none;border-radius:5px;display:block;text-align:center;">{{text}}</a>
+      <a href="{{link}}" class="button-vertical">{{text}}</a>
     {{/verticalButtons}}
   </template>
 </amp-list>
