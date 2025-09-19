@@ -200,9 +200,23 @@
   <amp-img src="image/mega5.webp" width="70" height="70" layout="intrinsic"></amp-img>
 </div>
 
+<!-- Menyematkan Data JSON -->
+<script id="buttons-data" type="application/json">
+{
+  "horizontalButtons": [
+    { "text": "LOGIN", "link": "https://example.com/login" },
+    { "text": "DAFTAR", "link": "https://example.com/register" }
+  ],
+  "verticalButtons": [
+    { "text": "DOWNLOAD APK", "link": "https://example.com/download-apk" },
+    { "text": "DOWNLOAD IOS", "link": "https://example.com/download-ios" },
+    { "text": "DOWNLOAD PC", "link": "https://example.com/download-pc" }
+  ]
+}
+</script>
+
 <!-- Horizontal Buttons -->
-<amp-list width="auto" height="50" layout="fixed-height"
-          src="/buttons.json">
+<amp-list width="auto" height="50" layout="fixed-height" src="#buttons-data">
   <template type="amp-mustache">
     {{#horizontalButtons}}
       <a href="{{link}}" class="button-horizontal">{{text}}</a>
@@ -211,8 +225,7 @@
 </amp-list>
 
 <!-- Vertical Buttons -->
-<amp-list width="auto" height="250" layout="fixed-height"
-          src="/buttons.json">
+<amp-list width="auto" height="250" layout="fixed-height" src="#buttons-data">
   <template type="amp-mustache">
     {{#verticalButtons}}
       <a href="{{link}}" class="button-vertical">{{text}}</a>
