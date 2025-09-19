@@ -201,7 +201,8 @@
 </div>
 
 <!-- Horizontal Buttons -->
-<amp-list width="auto" height="50" layout="fixed-height" src="assets/buttons.json" single-item>
+<amp-list width="auto" height="50" layout="fixed-height"
+          src="/buttons.json">
   <template type="amp-mustache">
     {{#horizontalButtons}}
       <a href="{{link}}" class="button-horizontal">{{text}}</a>
@@ -210,7 +211,8 @@
 </amp-list>
 
 <!-- Vertical Buttons -->
-<amp-list width="auto" height="250" layout="fixed-height" src="assets/buttons.json" single-item>
+<amp-list width="auto" height="250" layout="fixed-height"
+          src="/buttons.json">
   <template type="amp-mustache">
     {{#verticalButtons}}
       <a href="{{link}}" class="button-vertical">{{text}}</a>
