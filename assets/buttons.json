@@ -1,0 +1,29 @@
+{
+  "buttons": [
+    {
+      "type": "horizontal",
+      "text": "LOGIN",
+      "link": "https://example.com/login"
+    },
+    {
+      "type": "horizontal",
+      "text": "DAFTAR",
+      "link": "https://example.com/register"
+    },
+    {
+      "type": "vertical",
+      "text": "DOWNLOAD APK",
+      "link": "https://example.com/download-apk"
+    },
+    {
+      "type": "vertical",
+      "text": "DOWNLOAD IOS",
+      "link": "https://example.com/download-ios"
+    },
+    {
+      "type": "vertical",
+      "text": "DOWNLOAD PC",
+      "link": "https://example.com/download-pc"
+    }
+  ]
+}
